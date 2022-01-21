@@ -19,24 +19,17 @@
         </repository>
       </repositories>
     </profile>
-
-    <profile>
-      <id>ossrh</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <properties>
-        <gpg.executable>gpg</gpg.executable>
-        <gpg.passphrase>${env.GPG_SIGNING_KEY_PASSWORD}</gpg.passphrase>
-      </properties>
-    </profile>
   </profiles>
 
   <servers>
     <server>
-      <id>ossrh</id>
+      <id>maven</id>
       <username>${env.MAVEN_USERNAME}</username>
       <password>${env.MAVEN_PASSWORD}</password>
+    </server>
+    <server>
+      <id>gpg.passphrase</id>
+      <passphrase>${env.GPG_SIGNING_KEY_PASSWORD}</passphrase>
     </server>
   </servers>
 </settings>
