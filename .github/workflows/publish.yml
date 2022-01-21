@@ -28,7 +28,7 @@ jobs:
           MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
           GPG_SIGNING_KEY_PASSWORD: ${{ secrets.GPG_SIGNING_KEY_PASSWORD }}
         run: |
-          mvn \
+          ./mvnw \
             --no-transfer-progress \
             --batch-mode \
             clean deploy
