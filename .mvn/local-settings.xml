@@ -23,7 +23,7 @@
 
   <servers>
     <server>
-      <id>maven</id>
+      <id>ossrh</id>
       <username>${env.MAVEN_USERNAME}</username>
       <password>${env.MAVEN_PASSWORD}</password>
     </server>
