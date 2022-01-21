@@ -23,4 +23,4 @@ jobs:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
           GPG_SIGNING_KEY_PASSWORD: ${{ secrets.GPG_SIGNING_KEY_PASSWORD }}
-        run: ./mvnw --no-transfer-progress --batch-mode clean deploy
+        run: ./mvnw -Prelease --no-transfer-progress --batch-mode clean deploy
