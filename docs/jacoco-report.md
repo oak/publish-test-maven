@@ -1,8 +1,9 @@
 ---
 title: Jacoco Report
 author: Alexandre Carvalho
+category: reports
 menu_title: Jacoco
 layout: iframe
-iframe_url: /jacoco/test/html/index.html
+iframe_url: /docs/latest/site/jacoco/index.html
 order: 4
 ---

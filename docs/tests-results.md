@@ -2,9 +2,9 @@
 title: Tests Summary
 author: Alexandre Carvalho
 date: 2022-01-02
-category: docs
+category: reports
 menu_title: Tests
-iframe_url: /tests/test/index.html
+iframe_url: /docs/latest/site/surefire-report.html
 layout: iframe
 order: 2
 ---
