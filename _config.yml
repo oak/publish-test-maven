@@ -9,3 +9,6 @@ description: >
 baseurl: '/publish-test-maven'
 
 remote_theme: oak3dev/architect
+
+exclude: 
+  - docs/pages/templates
