@@ -1,7 +1,15 @@
 #! /bin/bash
-#VERSIONS_FILE=_data/versions.csv
-#VERSION_PAGES_LOCATION=pages/versions
-#TEMPLATES_LOCATION=.github/templates
+if ! test -n "${VERSIONS_FILE}"; then
+    VERSIONS_FILE=_data/versions.csv
+fi
+
+if ! test -n "${VERSION_PAGES_LOCATION}"; then
+    VERSION_PAGES_LOCATION=pages/versions
+fi
+
+if ! test -n "${TEMPLATES_LOCATION}"; then
+    TEMPLATES_LOCATION=.github/templates
+fi
 
 echo -e "version\nlatest" >$VERSIONS_FILE
 find ./docs -maxdepth 1 -type d -printf '%P\n' | grep -P "\d+\.\d+\.\d+.*" | sed '/-/!{s/$/_/}' | sort -rV | sed 's/_$//' >>$VERSIONS_FILE
