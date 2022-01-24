@@ -11,5 +11,5 @@ order: 4
 
 # Jacoco Reports
 {% for version in site.data.versions %}
-- [{{version.version}}](versions/jacoco-report-{{version.version}}.md)
+- [{{version.version}}](versions/jacoco-report-{{version.version}}.html)
 {% endfor %}
