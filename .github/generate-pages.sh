@@ -11,12 +11,14 @@ if ! test -n "${TEMPLATES_LOCATION}"; then
     TEMPLATES_LOCATION=.github/templates
 fi
 
+mkdir _data
+mkdir -p $VERSION_PAGES_LOCATION
+
 echo -e "version\nlatest" >$VERSIONS_FILE
 find ./docs -maxdepth 1 -type d -printf '%P\n' | grep -P "\d+\.\d+\.\d+.*" | sed '/-/!{s/$/_/}' | sort -rV | sed 's/_$//' >>$VERSIONS_FILE
 
 readarray -t VERSIONS <<<$(cat $VERSIONS_FILE)
 
-mkdir -p $VERSION_PAGES_LOCATION
 rm $VERSION_PAGES_LOCATION/*
 
 idx=0
