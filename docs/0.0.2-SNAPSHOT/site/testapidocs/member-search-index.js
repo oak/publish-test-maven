@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"dev.oak3.demo.publishtest","c":"HelloWorldServiceTest","l":"HelloWorldServiceTest()","url":"%3Cinit%3E()"}]
